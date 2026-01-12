@@ -1,6 +1,6 @@
 module AnsibleTowerClient
   module Middleware
-    class RaiseTowerError < Faraday::Response::Middleware
+    class RaiseTowerError < Faraday::Middleware
       include Logging
       CLIENT_ERROR_STATUSES = 400...600
 
