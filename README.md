@@ -1,7 +1,7 @@
 # AnsibleTowerClient
 
 [![Gem Version](https://badge.fury.io/rb/ansible_tower_client.svg)](http://badge.fury.io/rb/ansible_tower_client)
-[![Build Status](https://travis-ci.org/ansible/ansible_tower_client_ruby.svg)](https://travis-ci.org/ansible/ansible_tower_client_ruby)
+[![CI](https://github.com/ManageIQ/ansible_tower_client_ruby/actions/workflows/ci.yaml/badge.svg)](https://github.com/ManageIQ/ansible_tower_client_ruby/actions/workflows/ci.yaml)
 [![Code Climate](https://codeclimate.com/github/ansible/ansible_tower_client_ruby/badges/gpa.svg)](https://codeclimate.com/github/ansible/ansible_tower_client_ruby)
 [![Dependency Status](https://gemnasium.com/ansible/ansible_tower_client_ruby.svg)](https://gemnasium.com/ansible/ansible_tower_client_ruby)
 [![Coverage Status](http://img.shields.io/coveralls/ansible/ansible_tower_client_ruby.svg)](https://coveralls.io/r/ansible/ansible_tower_client_ruby)
