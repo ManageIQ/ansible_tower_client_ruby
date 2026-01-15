@@ -13,8 +13,9 @@ module AnsibleTowerClient
       verify_ssl = verify_ssl == OpenSSL::SSL::VERIFY_NONE ? false : true
 
       require 'faraday'
-      require 'faraday_middleware'
+      require 'faraday/follow_redirects'
       require 'ansible_tower_client/middleware/raise_tower_error'
+
       Faraday::Response.register_middleware :raise_tower_error => -> { Middleware::RaiseTowerError }
 
       connection_opts = { :ssl => {:verify => verify_ssl} }
@@ -23,13 +24,13 @@ module AnsibleTowerClient
       connection_opts[:request] = options[:request] if options[:request].present?
 
       @connection = Faraday.new(options[:base_url], connection_opts) do |f|
-        f.use(FaradayMiddleware::EncodeJson)
-        f.use(FaradayMiddleware::FollowRedirects, :limit => 3, :standards_compliant => true)
+        f.request :json
+        f.use(Faraday::FollowRedirects::Middleware, :limit => 3, :standards_compliant => true)
         f.request(:url_encoded)
         f.response(:raise_tower_error)
         f.response(:logger, logger)
         f.adapter(Faraday.default_adapter)
-        f.basic_auth(options[:username], options[:password])
+        f.request(:authorization, :basic, options[:username], options[:password])
       end
     end
 
