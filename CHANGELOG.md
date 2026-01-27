@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.22.0] - 2026-01-15
+### Changed
+- Update faraday v2 [(#152)](https://github.com/ansible/ansible_tower_client_ruby/pull/152)
+
+### Added
+- Add GitHub Actions CI to replace Travis CI [(#151)](https://github.com/ansible/ansible_tower_client_ruby/pull/151)
+
+### Fixed
+- Fix FactoryBot trait with static attribute [(#149)](https://github.com/ansible/ansible_tower_client_ruby/pull/149)
+
 ## [0.21.3] - 2020-07-09
 ### Fixed
 - Update dependency on more_core_extensions [(#145)](https://github.com/ansible/ansible_tower_client_ruby/pull/145)
@@ -150,7 +160,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Adjusted project_spec to test on a Project [(#63)](https://github.com/ansible/ansible_tower_client_ruby/pull/63)
 
-[Unreleased]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.21.3...master
+[Unreleased]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.22.0...master
+[0.22.0]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.21.3...v0.22.0
 [0.21.3]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.21.2...v0.21.3
 [0.21.2]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.21.1...v0.21.2
 [0.21.1]: https://github.com/ansible/ansible_tower_client_ruby/compare/v0.21.0...v0.21.1
